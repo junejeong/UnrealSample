@@ -8,9 +8,6 @@
 
 #include "SCSoundSubsystem.generated.h"
 
-/**
- * 
- */
 //enum class ESoundEventType : uint8
 //{
 //    BGM,

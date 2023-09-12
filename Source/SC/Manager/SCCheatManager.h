@@ -31,7 +31,7 @@ public:
 	void RegisterAutoCompleteEntries(TArray<FAutoCompleteCommand>& Commands);
 
 private:
-	inline static FString Prefix = "SP.";
+	inline static FString Prefix = "SC.";
 	inline static FColor CommandColor = FColor::Green;
 
 	TArray<FSCCheatData> Commands;

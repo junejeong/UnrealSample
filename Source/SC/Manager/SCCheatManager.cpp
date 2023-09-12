@@ -90,5 +90,5 @@ void USCCheatManager::ParseCommands()
 
 void USCCheatManager::CheatTestFunction(FString Argument)
 {
-	//SC_LOG(Log, TEXT("SC"));
+	SC_LOG(Log, TEXT("Excute CheatTestFunction"));
 }

@@ -1,8 +1,8 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "SCGameMode.h"
-#include "SCPlayerController.h"
-#include "SCCharacter.h"
+#include "Character/SCPlayerController.h"
+#include "Character/SCCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 
 ASCGameMode::ASCGameMode()

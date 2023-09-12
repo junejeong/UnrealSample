@@ -23,7 +23,10 @@ public class SC : ModuleRules
                 "CoreUObject",
                 "Engine",
                 "InputCore",
-                "OpenSSL"
+                "OpenSSL",
+                "Niagara",
+                "SignificanceManager",
+                "AIModule"
 
             });
 
@@ -34,7 +37,9 @@ public class SC : ModuleRules
                 "SlateCore",
                 "OnlineSubsystem",
                 "Networking",
-                "Sockets"
+                "Sockets",
+                "EnhancedInput",
+                "AudioModulation"
             });
 
     }

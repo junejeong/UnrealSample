@@ -1,14 +1,18 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "SCPlayerController.h"
+#include "SCCharacter.h"
+#include "Manager/SCCheatManager.h"
+
 #include "GameFramework/Pawn.h"
 #include "Blueprint/AIBlueprintHelperLibrary.h"
 #include "NiagaraSystem.h"
 #include "NiagaraFunctionLibrary.h"
-#include "SCCharacter.h"
 #include "Engine/World.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
+
+
 
 ASCPlayerController::ASCPlayerController()
 {
@@ -16,6 +20,8 @@ ASCPlayerController::ASCPlayerController()
 	DefaultMouseCursor = EMouseCursor::Default;
 	CachedDestination = FVector::ZeroVector;
 	FollowTime = 0.f;
+
+	CheatClass = USCCheatManager::StaticClass();
 }
 
 void ASCPlayerController::BeginPlay()

@@ -3,5 +3,7 @@
 /.vs
 /Build
 /Plugins
+/Binaries
+/Platforms
 *.sln
 *_BuiltData.uasset
