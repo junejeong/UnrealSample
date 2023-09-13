@@ -3,13 +3,12 @@
 #pragma once
 
 #include "SC.h"
+#include "SCAssetManager.h"
 
+#include <Sound/SoundBase.h>
 #include <Subsystems/GameInstanceSubsystem.h>
 
 #include "SCSoundSubsystem.generated.h"
-
-class USoundBase;
-class UMetaSound;
 
 UCLASS()
 class SC_API USCSoundSubsystem : public UGameInstanceSubsystem
@@ -23,11 +22,5 @@ public:
 
 public:
     void PlaySound(USoundBase* Sound);
-
-    void PlayBackgroundMusic(UMetaSound* BackgroundMusic);
-    UMetaSound* LoadMetaSound(const FString& MetaSoundPath);
-
-protected:
-    TMap<FString, UMetaSound*> LoadedMetaSounds;
-	
+    void PlayFootstepSound();
 };

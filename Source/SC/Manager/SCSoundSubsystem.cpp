@@ -2,7 +2,9 @@
 
 
 #include "SCSoundSubsystem.h"
-#include "SCAssetManager.h"
+
+#include <Kismet/GameplayStatics.h>
+#include <PhysicalMaterials/PhysicalMaterial.h>
 
 void USCSoundSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
@@ -21,13 +23,44 @@ bool USCSoundSubsystem::ShouldCreateSubsystem(UObject* Outer) const
 
 void USCSoundSubsystem::PlaySound(USoundBase* Sound)
 {
+	if (Sound)
+	{
+		UGameplayStatics::PlaySound2D(GetWorld(), Sound);
+	}
 }
 
-void USCSoundSubsystem::PlayBackgroundMusic(UMetaSound* BackgroundMusic)
+void USCSoundSubsystem::PlayFootstepSound()
 {
-}
+    FVector Start = FVector(0, 0, 10);
+    FVector End = Start - FVector(0, 0, 100);
 
-UMetaSound* USCSoundSubsystem::LoadMetaSound(const FString& MetaSoundPath)
-{
-    return nullptr;
+    FHitResult HitResult;
+    FCollisionQueryParams CollisionParams;
+    USoundBase* Sound = nullptr;
+
+    if (GetWorld()->LineTraceSingleByChannel(HitResult, Start, End, ECC_Visibility, CollisionParams))
+    {
+        const UPhysicalMaterial* PhysicalMaterial = nullptr;
+
+        if (HitResult.PhysMaterial.IsValid())
+        {
+            PhysicalMaterial = HitResult.PhysMaterial.Get();
+
+            if (PhysicalMaterial)
+            {
+                if (PhysicalMaterial->SurfaceType == EPhysicalSurface::SurfaceType1)
+                {
+                    PlaySound(Sound);
+                }
+                else if (PhysicalMaterial->SurfaceType == EPhysicalSurface::SurfaceType2)
+                {
+                    PlaySound(Sound);
+                }
+            }
+        }
+    }
+    else
+    {
+       //Do Somethings
+    }
 }

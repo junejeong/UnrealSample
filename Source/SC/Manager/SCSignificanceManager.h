@@ -14,5 +14,5 @@
 UCLASS()
 class SC_API USCSignificanceManager : public USignificanceManager
 {
-	GENERATED_BODY()	
+	GENERATED_BODY()
 };
