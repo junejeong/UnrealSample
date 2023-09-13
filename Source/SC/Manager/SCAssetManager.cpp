@@ -16,7 +16,7 @@ USCAssetManager& USCAssetManager::Get()
 		return *Singleton;
 	}
 
-	SC_LOG(Fatal, TEXT("Invalid AssetManagerClassName in DefaultEngine.ini.  It must be set to LyraAssetManager!"));
+	SC_LOG(Fatal, TEXT("Invalid AssetManagerClassName in DefaultEngine.ini.  It must be set to AssetManager!"));
 
 	return *NewObject<USCAssetManager>();
 }
