@@ -2,12 +2,10 @@
 
 
 #include "SCEffectSubsystem.h"
-#include "NiagaraFunctionLibrary.h"
-#include "Engine/World.h"
 
-USCEffectSubsystem::USCEffectSubsystem()
-{
-}
+#include <NiagaraFunctionLibrary.h>
+
+#include "Engine/World.h"
 
 void USCEffectSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
@@ -17,6 +15,11 @@ void USCEffectSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 void USCEffectSubsystem::Deinitialize()
 {
 	Super::Deinitialize();
+}
+
+bool USCEffectSubsystem::ShouldCreateSubsystem(UObject* Outer) const
+{
+	return false;
 }
 
 UNiagaraComponent* USCEffectSubsystem::SpawnNiagaraSystem(UNiagaraSystem* System, FEffectParam Param, bool bAttached, bool bAbsoluteScale)

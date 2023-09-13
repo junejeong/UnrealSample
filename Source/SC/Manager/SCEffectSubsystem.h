@@ -3,9 +3,11 @@
 #pragma once
 
 #include "SC.h"
-#include "Subsystems/WorldSubsystem.h"
-#include "NiagaraSystem.h"
-#include "NiagaraComponent.h"
+
+#include <Subsystems/WorldSubsystem.h>
+#include <NiagaraSystem.h>
+#include <NiagaraComponent.h>
+
 #include "SCEffectSubsystem.generated.h"
 
 /**
@@ -26,10 +28,9 @@ class SC_API USCEffectSubsystem : public UWorldSubsystem
 	GENERATED_BODY()
 
 public:
-    USCEffectSubsystem();
-
     virtual void Initialize(FSubsystemCollectionBase& Collection) override;
     virtual void Deinitialize() override;
+    virtual bool ShouldCreateSubsystem(UObject* Outer) const override;
 
 public:
     UNiagaraComponent* SpawnNiagaraSystem(UNiagaraSystem* System, FEffectParam Param, bool bAttached, bool bAbsoluteScale);

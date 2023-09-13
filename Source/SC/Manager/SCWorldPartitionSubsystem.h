@@ -2,8 +2,10 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "WorldPartition/WorldPartitionSubsystem.h"
+#include "SC.h"
+
+#include <WorldPartition/WorldPartitionSubsystem.h>
+
 #include "SCWorldPartitionSubsystem.generated.h"
 
 /**

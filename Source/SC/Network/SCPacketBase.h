@@ -2,12 +2,12 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
+#include "SC.h"
 
 /**
  * 
  */
-class SC_API SCPacketBase
+class SCPacketBase
 {
 public:
 	SCPacketBase();

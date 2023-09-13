@@ -3,9 +3,11 @@
 #pragma once
 
 #include "SC.h"
-#include "Templates/SubclassOf.h"
-#include "GameFramework/PlayerController.h"
-#include "InputActionValue.h"
+
+#include <Templates/SubclassOf.h>
+#include <GameFramework/PlayerController.h>
+#include <InputActionValue.h>
+
 #include "SCPlayerController.generated.h"
 
 /** Forward declaration to improve compiling times */

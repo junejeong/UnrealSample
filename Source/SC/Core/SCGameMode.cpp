@@ -3,7 +3,8 @@
 #include "SCGameMode.h"
 #include "Character/SCPlayerController.h"
 #include "Character/SCCharacter.h"
-#include "UObject/ConstructorHelpers.h"
+
+#include <UObject/ConstructorHelpers.h>
 
 ASCGameMode::ASCGameMode()
 {

@@ -2,8 +2,10 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "GameFramework/GameModeBase.h"
+#include "SC.h"
+
+#include <GameFramework/GameModeBase.h>
+
 #include "SCGameMode.generated.h"
 
 UCLASS(minimalapi)

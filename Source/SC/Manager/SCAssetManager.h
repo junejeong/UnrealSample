@@ -3,7 +3,9 @@
 #pragma once
 
 #include "SC.h"
-#include "Engine/AssetManager.h"
+
+#include <Engine/AssetManager.h>
+
 #include "SCAssetManager.generated.h"
 
 /**

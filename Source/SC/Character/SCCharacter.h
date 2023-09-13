@@ -3,7 +3,9 @@
 #pragma once
 
 #include "SC.h"
-#include "GameFramework/Character.h"
+
+#include <GameFramework/Character.h>
+
 #include "SCCharacter.generated.h"
 
 UCLASS(Blueprintable)
